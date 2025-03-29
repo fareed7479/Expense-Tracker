@@ -20,10 +20,10 @@ const CustomPieChart = ({
 }) => {
 
     // Prepare legend data explicitly
-    const legendData = data.map((entry, index) => ({
-    value: entry.name,
-    color: colors[index % colors.length],
-  }));
+  //   const legendData = data.map((entry, index) => ({
+  //   value: entry.name,
+  //   color: colors[index % colors.length],
+  // }));
 
 
   return (
@@ -44,7 +44,7 @@ const CustomPieChart = ({
                 ) )}
             </Pie>
             <Tooltip content={<CustomTooltip/>}/>
-            <Legend content={(props) => <CustomLegend {...props} payload={legendData} />} />
+            <Legend content={ <CustomLegend />} />
 
             {showTextAnchor && (
           <text
@@ -52,7 +52,6 @@ const CustomPieChart = ({
             y="50%"
             dy={-25}
             textAnchor="middle"
-            dominantBaseline="middle"
             fill="#666"
             fontSize="14px"
           >
@@ -64,7 +63,6 @@ const CustomPieChart = ({
             x="50%"
             y="55%"
             textAnchor="middle"
-            dominantBaseline="middle"
             fill="#333"
             fontSize="24px"
             fontWeight="600"

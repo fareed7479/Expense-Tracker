@@ -43,10 +43,10 @@ exports.getDashboardData = async (req,res) =>{
         console.log("TotalincomeLast60Days",{incomeLast60Days,userId:isValidObjectId(userId)});
 
 
-        //Get expense transactions in the last 30 days
+        //Get expense transactions in the last 60 days
         const last30DaysExpenseTransactions = await Expense.find({
             userId,
-            date:{ $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) },
+            date:{ $gte: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000) },
         }).sort({date:-1});
 
         console.log("last30DaysExpenseTransactions",{last30DaysExpenseTransactions,userId:isValidObjectId(userId)});
