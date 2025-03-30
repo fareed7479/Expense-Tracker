@@ -40,7 +40,7 @@ const TransactionInfoCard = ( {
                 {/* Amount & Delete Button */}
                 <div className='flex items-center gap-2'>
                     {/* Delete Button */}
-                    {!hideDeleteBtn && onDelete && (
+                    {!hideDeleteBtn  && (
                         <button 
                             className='text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer'
                             onClick={onDelete}>
