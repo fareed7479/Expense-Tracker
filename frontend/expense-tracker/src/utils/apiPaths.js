@@ -1,4 +1,4 @@
-export const BASE_URL = "https://expense-tracker-back-five.vercel.app";
+export const BASE_URL = "https://expense-tracker-beta-red-62.vercel.app/";
 // export const BASE_URL = "http://localhost:8000";
 
 
